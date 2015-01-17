@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Number of Cores #{CPU_NUM}
+  each val in CPU
+    p Current Model: #{val.model}
+    p Current Speed: #{val.speed}
+    p Current user time  #{val.times.user}
+    p Current system #{val.times.sys}
+  p Free memory #{FREEMEM}
